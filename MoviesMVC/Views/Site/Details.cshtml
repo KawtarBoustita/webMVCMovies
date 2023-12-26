@@ -1,0 +1,65 @@
+﻿@model  MoviesMVC.Models.Movie
+
+
+@{
+    ViewBag.Title = "Details";
+
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div class="content">
+    <p>
+        @Html.ActionLink("<Back to List", "Index")
+    </p>
+    <div class="movieInfo">
+        <img width="450" src="~/Content/Images/@Model.Image" alt="@Model.Title" />
+        <div class="infos">
+            <div class="titleDetails">
+                @Model.Title
+            </div>
+
+            <div class="dateDetails">
+                @{
+                    Convert.ToDateTime(Model.ReleaseDate).ToString("MMM dd yyyy");
+
+                    int durationHours = Model.Duration / 60;
+                    int durationMinutes = Model.Duration % 60;
+
+
+                    ;
+
+                }
+
+                <label>
+                    @Convert.ToDateTime(Model.ReleaseDate).ToString("MMM dd yyyy")
+                    (@Model.Country)-
+                    @durationHours<span>h</span>@durationMinutes
+                </label>
+            </div>
+            @{
+                string colorClass = "green";
+                if (Model.Rating < 5)
+                {
+                    colorClass = "red";
+                }
+                else if (Model.Rating < 7)
+                {
+                    colorClass = "yellow";
+                }
+                <div class="ratingDetails @colorClass">
+                    <div class="ratingDetailsInner">
+                        <div>
+                            @Model.Rating.ToString("0.0")
+                        </div>
+                    </div>
+
+                </div>
+            }
+            <div class="description">
+                @Model.Description
+            </div>
+        </div>
+    </div>
+</div>
+
+

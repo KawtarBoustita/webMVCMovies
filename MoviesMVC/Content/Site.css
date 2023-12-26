@@ -1,0 +1,279 @@
+﻿body {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    font-family: Lato;
+}
+
+input {
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+select {
+    padding: 0.25rem;
+    font-size: 1rem;
+    border: 1px #e5e5e5 solid;
+    margin-left: 1rem;
+    border-radius: 8px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+
+.header {
+    background: black;
+    padding: 2.5rem;
+    font-size: 3rem;
+    color: #f7f7f7;
+}
+
+.footer {
+    background: black;
+    padding: 2rem;
+    font-size: 1rem;
+    color: #f7f7f7;
+}
+
+.actions {
+    display: flex;
+}
+
+    .actions > div {
+        flex: 1;
+    }
+
+.sort {
+    text-align: end;
+}
+
+.listing {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+    .listing a {
+        text-decoration: none;
+        color: black;
+    }
+
+.content {
+    width: 100%;
+    flex: 4;
+}
+
+.movieInfo {
+    display: flex;
+    gap: 2rem;
+}
+
+    .movieInfo img {
+        border-radius: 10px;
+    }
+
+.sidebar {
+    border: 1px #e5e5e5 solid;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 23.5%;
+}
+
+    .sidebar > * {
+        margin-bottom: 1rem;
+    }
+
+    .sidebar select, input {
+        border: 1px #e5e5e5 solid;
+        padding: 0.75rem 0.25rem;
+        margin: 0;
+        width: 100%;
+    }
+
+.btn {
+    background: #0093cd;
+    color: white;
+    border: none;
+}
+
+    .btn.clear {
+        background: #c4c4c4;
+    }
+
+.item {
+    position: relative;
+    border-radius: 1px;
+    box-shadow: 0px 6px 16px -9px rgba(0,0,0,0.5);
+}
+
+.info {
+    position: relative;
+    padding: 0 1rem 1rem 1rem;
+    margin-top: 1rem;
+}
+
+.image img {
+    border-radius: 10px 10px 0 0;
+    aspect-ratio: 0.66;
+    width: 100%;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.titleDetails {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.date {
+    color: #c4c4c4;
+}
+
+.dateDetails {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.description {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+    text-align: justify;
+    color: rgb(128, 128, 128);
+}
+
+.rating {
+    position: absolute;
+    top: -2.25rem;
+    left: 0rem;
+    margin-left: 0.75rem;
+    border: grey 2px solid;
+    border-radius: 50%;
+    background: black;
+    width: 2rem;
+    aspect-ratio: 1;
+    text-align: center;
+    color: white;
+    padding-top: 0.3rem;
+    font-size: 14px;
+}
+
+.ratingDetails {
+    font-size: 3rem;
+    width: 95px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.85rem 0.65rem;
+}
+
+.red {
+    border: red 3px solid;
+}
+
+.yellow {
+    border: #fbfb83 3px solid;
+}
+
+.green {
+    border: green 3px solid;
+}
+
+.ratingDetailsInner > div {
+}
+
+.pager {
+    display: inline-block;
+}
+
+    .pager a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+        .pager a.active {
+            background-color: #0093cd;
+            color: white;
+            border-radius: 10px;
+        }
+
+@media screen and (max-width:480px) {
+    body {
+    }
+
+    .main {
+        display: block;
+    }
+
+    .listing {
+        grid-template-columns: auto;
+    }
+
+    .item {
+        margin-bottom: 1.5rem;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .actions {
+        display: block;
+    }
+
+    .pager {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .sort {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
